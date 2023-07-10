@@ -1,0 +1,85 @@
+#appointment {
+  .container {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 6%;
+
+    .info {
+      p {
+        margin: 0.5rem 0 2rem;
+      }
+
+      article {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+
+        small {
+          margin-top: 0.4rem;
+          display: block;
+        }
+
+        .info__icon {
+          background: $secondary-color;
+          color: $white-color;
+          display: flex;
+          height: fit-content;
+          // align-items: center;
+          // margin-top: 0.8rem;
+          padding: 0.8rem;
+          border-radius: 50%;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    // ====  Form size ====
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form__group {
+        label {
+          font-size: 1.1rem;
+          margin-bottom: 0.4rem;
+          display: inline-block;
+          font-weight: 600;
+          color: $primary-color;
+        }
+
+        input,
+        textarea,
+        select {
+          background: $white-color;
+          padding: 0.85rem 1rem;
+          display: block;
+          width: 100%;
+          border-radius: 0.4rem;
+          resize: none;
+          // appearance: none;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+  }
+}
+
+/*==================== MEDIA QUERIES (SMALL DEVICES) ==================*/
+@media screen and (max-width: 600px) {
+  #appointment {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .info {
+
+        h2,
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
