@@ -1,3 +1,11 @@
+$('a').on('click', function(event) {
+  event.preventDefault();
+  var target = $(this).attr('href');
+  window.location.href = target;
+});
+
+
+
 (function ($) {
   "use strict";
 
